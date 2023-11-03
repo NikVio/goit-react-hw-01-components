@@ -1,20 +1,24 @@
 import user from './data/user.json';
+import friends from './data/friends.json';
+import transactions from './data/transactions.json';
 
-//import data from './data/data.json'
+import data from './data/data.json';
 
 import { Profile } from './Profile/Profile';
-
+import { FriendList } from './FriendList/FriendList';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 
 // import { StatisticList } from './Statistics/StatisticList';
+import { Statistics } from './Statistics/Statistics';
 
 export const App = () => {
   return (
     <div>
       <Profile user={user} />
-      {/* <h2>Upload stats</h2>
-      <StatisticList static={data} /> */}
+      <Statistics title="Upload stats" data={data} />
+      <Statistics data={data} />
+      <FriendList friends={friends} />;
+      <TransactionHistory transactions={transactions} />
     </div>
-  )
-  
-
-}
+  );
+};
