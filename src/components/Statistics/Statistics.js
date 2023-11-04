@@ -1,20 +1,24 @@
-export const Statistics = ({title, data}) => {
+import {
+  StaticList,
+  StaticItem,
+  StaticSection,
+  StaticPercentage,
+} from './Statistics.styled';
+
+export const Statistics = ({ title, data }) => {
   return (
-    <section>
-      <h2>{title}</h2>
-          <ul>
+    <StaticSection>
+      {title && <h2>{title}</h2>}
+      <StaticList>
         {data.map(stat => {
           return (
-            <li key={stat.id}>
+            <StaticItem key={stat.id}>
               <span>{stat.label}</span>
-              <span>{stat.percentage}%</span>
-            </li>
+              <StaticPercentage>{stat.percentage}%</StaticPercentage>
+            </StaticItem>
           );
         })}
-      </ul>
-    </section>
-  )
-
-}
-
-
+      </StaticList>
+    </StaticSection>
+  );
+};

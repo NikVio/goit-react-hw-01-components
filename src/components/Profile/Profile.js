@@ -1,20 +1,23 @@
-import { StatsList } from "./StatsList"
+import { StatsList } from './StatsList';
+import {
+  ProfileWrapper,
+  ProfileImg,
+  ProfileName,
+  Text,
+} from './Profile.styled';
+export const Profile = ({
+  user: { avatar, username, tag, location, stats },
+}) => {
+  return (
+    <ProfileWrapper>
+      <div>
+        <ProfileImg src={avatar} alt={username} width="120" height="120" />
 
-export const Profile = ({ user: { avatar, username, tag, location, stats } }) => {
-  return <div>
-    <div>
-    <img
-      src={avatar}
-        alt={username}
-        width="120"
-        height="120"
-    />
-    <p>{username}</p>
-    <p>@{tag}</p>
-    <p>{location}</p>
+        <ProfileName>{username}</ProfileName>
+        <Text>@{tag}</Text>
+        <Text>{location}</Text>
       </div>
-      <StatsList stats={stats}/>
-      
-
-  </div>
-}
+      <StatsList stats={stats} />
+    </ProfileWrapper>
+  );
+};

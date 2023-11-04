@@ -8,17 +8,17 @@ import { Profile } from './Profile/Profile';
 import { FriendList } from './FriendList/FriendList';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 
-// import { StatisticList } from './Statistics/StatisticList';
 import { Statistics } from './Statistics/Statistics';
+import { GlobalStyled } from './GlobalStyled';
 
 export const App = () => {
   return (
     <div>
       <Profile user={user} />
       <Statistics title="Upload stats" data={data} />
-      <Statistics data={data} />
       <FriendList friends={friends} />;
       <TransactionHistory transactions={transactions} />
+      <GlobalStyled />
     </div>
   );
 };
