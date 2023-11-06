@@ -9,7 +9,7 @@ import { FriendList } from './FriendList/FriendList';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 
 import { Statistics } from './Statistics/Statistics';
-import { GlobalStyled } from './GlobalStyled';
+import { GlobalStyle } from './GlobalStyled';
 
 export const App = () => {
   return (
@@ -18,7 +18,7 @@ export const App = () => {
       <Statistics title="Upload stats" data={data} />
       <FriendList friends={friends} />;
       <TransactionHistory transactions={transactions} />
-      <GlobalStyled />
+      <GlobalStyle />
     </div>
   );
 };

@@ -12,7 +12,10 @@ export const Statistics = ({ title, data }) => {
       <StaticList>
         {data.map(stat => {
           return (
-            <StaticItem key={stat.id}>
+            <StaticItem
+              key={stat.id}
+              style={{ backgroundColor: getRandomHexColor() }}
+            >
               <span>{stat.label}</span>
               <StaticPercentage>{stat.percentage}%</StaticPercentage>
             </StaticItem>
@@ -22,3 +25,9 @@ export const Statistics = ({ title, data }) => {
     </StaticSection>
   );
 };
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}

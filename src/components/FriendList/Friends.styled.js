@@ -10,7 +10,6 @@ export const FriendsItem = styled.li`
   gap: 8px;
   max-width: 150px;
   border-radius: 8px;
-  /* border: 1px solid black; */
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 10px;
   margin-bottom: 10px;
